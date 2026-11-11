@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StayEase hotel booking platform. Discover comfortable rooms and book your stay.">
+  <title>StayEase | Hotel Booking Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <a href="#home" class="logo">Stay<span>Ease</span><small>HOTEL & STAYS</small></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+  <nav class="nav" id="nav">
+    <a href="#home">Home</a>
+    <a href="#rooms">Our Rooms</a>
+    <a href="#about">About</a>
+    <a href="#booking">Book Now</a>
+  </nav>
+  <a href="#booking" class="header-button">Find a Room</a>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="eyebrow">WELCOME TO STAYEASE</p>
+    <h1>Your comfort.<br><span>Our priority.</span></h1>
+    <p>Discover beautiful spaces, thoughtful hospitality and unforgettable stays. Your perfect getaway starts here.</p>
+    <a href="#rooms" class="btn btn-gold">Explore Rooms</a>
+  </div>
+</section>
+
+<section class="search-section">
+  <form id="searchForm" class="search-form">
+    <div class="search-field">
+      <label for="checkIn">CHECK-IN</label>
+      <input type="date" id="checkIn" required>
+    </div>
+    <div class="search-field">
+      <label for="checkOut">CHECK-OUT</label>
+      <input type="date" id="checkOut" required>
+    </div>
+    <div class="search-field">
+      <label for="searchGuests">GUESTS</label>
+      <select id="searchGuests">
+        <option value="1">1 Guest</option>
+        <option value="2" selected>2 Guests</option>
+        <option value="3">3 Guests</option>
+        <option value="4">4 Guests</option>
+        <option value="5">5 Guests</option>
+        <option value="6">6 Guests</option>
+      </select>
+    </div>
+    <button class="btn btn-green search-button" type="submit">Search Rooms</button>
+  </form>
+  <p id="searchMessage" class="search-message" aria-live="polite"></p>
+</section>
+
+<section class="section rooms-section" id="rooms">
+  <div class="section-heading">
+    <p class="eyebrow">OUR ACCOMMODATION</p>
+    <h2>Find your perfect <span>stay.</span></h2>
+    <p>Choose from thoughtfully designed rooms for every kind of traveller.</p>
+  </div>
+
+  <div class="room-grid">
+
+    <!-- STANDARD ROOM -->
+    <article class="room-card" data-room="standard" data-capacity="2" data-price="2499">
+      <div class="room-image">
+        <div class="room-gallery">
+          <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=85" alt="Standard hotel bedroom">
+          <img src="https://images.unsplash.com/photo-1617104678098-de229db51175?auto=format&fit=crop&w=600&q=85" alt="Standard room interior">
+          <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=600&q=85" alt="Standard room sleeping area">
+        </div>
+        <span class="room-label">COMFORT PICK</span>
+      </div>
+      <div class="room-details">
+        <div class="room-title-row">
+          <h3>Standard Room</h3>
+          <span class="rating">★ 4.6</span>
+        </div>
+        <p class="room-description">A cosy and welcoming space for a relaxing stay.</p>
+        <div class="amenities">
+          <span>❄ Air Conditioning</span>
+          <span>📶 Free Wi-Fi</span>
+          <span>📺 Smart TV</span>
+          <span>🚿 Private Bath</span>
+        </div>
+        <div class="room-bottom">
+          <div class="price">₹2,499 <small>/ night</small></div>
+          <button class="btn btn-green select-room" data-room="standard">Book Room</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- DELUXE ROOM -->
+    <article class="room-card" data-room="deluxe" data-capacity="3" data-price="3999">
+      <div class="room-image">
+        <div class="room-gallery">
+          <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1000&q=85" alt="Deluxe hotel bedroom">
+          <img src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?auto=format&fit=crop&w=600&q=85" alt="Deluxe hotel interior">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=85" alt="Deluxe hotel accommodation">
+        </div>
+        <span class="room-label">POPULAR</span>
+      </div>
+      <div class="room-details">
+        <div class="room-title-row">
+          <h3>Deluxe Room</h3>
+          <span class="rating">★ 4.8</span>
+        </div>
+        <p class="room-description">Extra space and elegant interiors for added comfort.</p>
+        <div class="amenities">
+          <span>❄ Air Conditioning</span>
+          <span>📶 Free Wi-Fi</span>
+          <span>☕ Coffee Maker</span>
+          <span>🛁 Bathtub</span>
+        </div>
+        <div class="room-bottom">
+          <div class="price">₹3,999 <small>/ night</small></div>
+          <button class="btn btn-green select-room" data-room="deluxe">Book Room</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- EXECUTIVE SUITE -->
+    <article class="room-card" data-room="suite" data-capacity="4" data-price="5999">
+      <div class="room-image">
+        <div class="room-gallery">
+          <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1000&q=85" alt="Executive suite bedroom">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=85" alt="Executive suite hotel interior">
+          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=85" alt="Luxury hotel suite">
+        </div>
+        <span class="room-label">LUXURY</span>
+      </div>
+      <div class="room-details">
+        <div class="room-title-row">
+          <h3>Executive Suite</h3>
+          <span class="rating">★ 4.9</span>
+        </div>
+        <p class="room-description">A spacious suite with premium furnishings and a lounge area.</p>
+        <div class="amenities">
+          <span>❄ Air Conditioning</span>
+          <span>📶 Free Wi-Fi</span>
+          <span>🛋 Lounge Area</span>
+          <span>🍽 Room Service</span>
+        </div>
+        <div class="room-bottom">
+          <div class="price">₹5,999 <small>/ night</small></div>
+          <button class="btn btn-green select-room" data-room="suite">Book Room</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- FAMILY ROOM -->
+    <article class="room-card" data-room="family" data-capacity="6" data-price="7499">
+      <div class="room-image">
+        <div class="room-gallery">
+          <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1000&q=85" alt="Family hotel bedroom">
+          <img src="https://images.unsplash.com/photo-1564078516393-cf04bd966897?auto=format&fit=crop&w=600&q=85" alt="Family hotel room interior">
+          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=85" alt="Family accommodation">
+        </div>
+        <span class="room-label">FAMILY FAVOURITE</span>
+      </div>
+      <div class="room-details">
+        <div class="room-title-row">
+          <h3>Family Room</h3>
+          <span class="rating">★ 4.8</span>
+        </div>
+        <p class="room-description">A generous space designed for family trips and group stays.</p>
+        <div class="amenities">
+          <span>❄ Air Conditioning</span>
+          <span>📶 Free Wi-Fi</span>
+          <span>🛏 Extra Beds</span>
+          <span>🍽 Room Service</span>
+        </div>
+        <div class="room-bottom">
+          <div class="price">₹7,499 <small>/ night</small></div>
+          <button class="btn btn-green select-room" data-room="family">Book Room</button>
+        </div>
+      </div>
+    </article>
+
+  </div>
+  <p class="availability-note">Room prices are sample demonstration prices in Indian Rupees.</p>
+</section>
+
+<section class="about-section" id="about">
+  <div class="about-content">
+    <p class="eyebrow">THE STAYEASE EXPERIENCE</p>
+    <h2>More than a stay.<br><span>A feeling of home.</span></h2>
+    <p>At StayEase, we believe that a great journey deserves a great place to stay. From comfortable rooms to thoughtful amenities, our goal is to make every visit memorable.</p>
+    <div class="about-points">
+      <div><strong>24/7</strong><span>Guest Support</span></div>
+      <div><strong>100%</strong><span>Comfort Focused</span></div>
+      <div><strong>4.8/5</strong><span>Guest Rating</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section booking-section" id="booking">
+  <div class="section-heading">
+    <p class="eyebrow">PLAN YOUR VISIT</p>
+    <h2>Complete your <span>booking.</span></h2>
+    <p>Select your room and travel details to calculate your estimated stay cost.</p>
+  </div>
+
+  <form id="bookingForm" class="booking-form">
+    <div class="form-grid">
+      <label>
+        Full Name
+        <input type="text" id="guestName" placeholder="Enter your full name" minlength="2" required>
+      </label>
+      <label>
+        Phone Number
+        <input type="tel" id="guestPhone" placeholder="10-digit mobile number" maxlength="10" required>
+      </label>
+      <label>
+        Select Room
+        <select id="selectedRoom" required>
+          <option value="">Choose a room</option>
+          <option value="standard">Standard Room — ₹2,499/night</option>
+          <option value="deluxe">Deluxe Room — ₹3,999/night</option>
+          <option value="suite">Executive Suite — ₹5,999/night</option>
+          <option value="family">Family Room — ₹7,499/night</option>
+        </select>
+      </label>
+      <label>
+        Number of Guests
+        <select id="bookingGuests" required>
+          <option value="1">1 Guest</option>
+          <option value="2" selected>2 Guests</option>
+          <option value="3">3 Guests</option>
+          <option value="4">4 Guests</option>
+          <option value="5">5 Guests</option>
+          <option value="6">6 Guests</option>
+        </select>
+      </label>
+      <label>
+        Check-in Date
+        <input type="date" id="bookingCheckIn" required>
+      </label>
+      <label>
+        Check-out Date
+        <input type="date" id="bookingCheckOut" required>
+      </label>
+    </div>
+
+    <div class="price-summary" aria-live="polite">
+      <div><span>Room price per night</span><strong id="nightlyPrice">₹0</strong></div>
+      <div><span>Number of nights</span><strong id="nightCount">0</strong></div>
+      <div><span>Estimated total</span><strong class="total-price" id="totalPrice">₹0</strong></div>
+    </div>
+
+    <button type="submit" class="btn btn-gold submit-button">Check Availability & Continue</button>
+    <p id="bookingMessage" class="booking-message" aria-live="polite"></p>
+    <p class="form-note">Demo booking only. No real reservation or payment is processed.</p>
+  </form>
+</section>
+
+</main>
+
+<div class="modal-overlay" id="confirmationModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button type="button" class="modal-close" id="closeModal" aria-label="Close dialog">×</button>
+    <div class="modal-icon">✓</div>
+    <p class="eyebrow">BOOKING REQUEST READY</p>
+    <h2 id="modalTitle">Your stay awaits!</h2>
+    <p id="modalDescription"></p>
+    <div class="modal-summary" id="modalSummary"></div>
+    <button type="button" class="btn btn-green modal-done" id="doneButton">Done</button>
+    <p class="modal-note">This is a demonstration confirmation, not an actual hotel booking.</p>
+  </div>
+</div>
+
+<footer class="footer">
+  <a href="#home" class="logo">Stay<span>Ease</span></a>
+  <p>Comfort, convenience and care — all in one stay.</p>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#about">About</a>
+    <a href="#booking">Book Now</a>
+  </div>
+  <small>© 2026 StayEase Hotel & Stays. All rights reserved.</small>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
